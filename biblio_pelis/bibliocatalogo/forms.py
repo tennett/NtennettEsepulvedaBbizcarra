@@ -5,5 +5,5 @@ class CrearUsuario(forms.ModelForm):
     class Meta:
         model = user
         fields= [
-            'Nombre', 'Email', 'Password'
+            'nombre', 'email', 'password'
             ]

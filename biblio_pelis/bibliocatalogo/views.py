@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import pelicula, user
-import forms
+from . import forms
 def index (request):
 # Create your views here.
 
