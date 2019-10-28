@@ -9,5 +9,5 @@ urlpatterns = [
 
 urlpatterns += [
     path('registro/', views.creacion_usuario.as_view(), name='user_form')
-    
+    #
 ]
