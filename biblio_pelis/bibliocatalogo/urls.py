@@ -1,13 +1,9 @@
 from django.urls import path
-from . import views
+from .views import index, view_crear_usuario
 
 
 urlpatterns = [
-    path('', views.index ,name='index')
-    
-]
-
-urlpatterns += [
-    path('registro/', views.creacion_usuario.as_view(), name='user_form')
+    path('', index,name='index'),
+    path('', view_crear_usuario, name='registro')
     
 ]
