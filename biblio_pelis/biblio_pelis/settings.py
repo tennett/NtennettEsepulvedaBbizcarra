@@ -52,10 +52,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'biblio_pelis.urls'
 
+
+
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+MEDIA_ROOT = PROJECT_PATH + '/media/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
