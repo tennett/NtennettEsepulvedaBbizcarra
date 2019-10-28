@@ -22,13 +22,12 @@ class user(models.Model):
         return reverse("user_detail", args=[str(self.pk)])
     
 class pelicula(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Codigo de pelicula')
     nombre_pelicula = models.CharField(max_length=60,help_text="Nombre de pelicula")
     genero = models.CharField(max_length=100, help_text="Genero de la")
     año = models.DateField(null=True)
 
     def __str__(self):
-        return f'{self.id}, {self.nombre_pelicula}'	
+        return f'{self.nombre_pelicula}'	
     
     def get_absolute_url(self):
         return reverse("pelicula_detail", args=[str(self.pk)])
