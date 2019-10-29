@@ -6,7 +6,7 @@
 <p> Desea eliminar el usuario :{{user}} ? </p>
 
 <form action="" method="POST">
-{% csrf_token %}
-<input type="enviar" action="" value="si,eliminar"/>
+    {% csrf_token %}
+    <input type="enviar" action="" value="si,eliminar"/>
 </form>
 {% endblock %}

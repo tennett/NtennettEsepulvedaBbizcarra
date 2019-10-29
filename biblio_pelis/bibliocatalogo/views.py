@@ -29,5 +29,7 @@ class Eliminacion_usuario(DeleteView):
     succes_url = reverse_lazy('user')
 
 class DetalleVistaUsuario(generic.DetailView):
-    model=user
+    model = user
 
+class ListaUsuario(generic.ListView):
+    model = user

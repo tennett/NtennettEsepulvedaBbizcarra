@@ -8,6 +8,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('registro/', views.creacion_usuario.as_view(), name='user_form')
-    #
+    path('registro/', views.creacion_usuario.as_view(), name='CreateView'),
+    path('<pk>/borrar/', views.Actualizacion_usuario.as_view(), name="DeleteView"),
+    path("listaUsuarios/", views.ListaUsuario.as_view(), name="listaUsuarios")
 ]

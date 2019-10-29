@@ -1,0 +1,12 @@
+{%extends "base_generic.html"%}
+{% Block List%}
+    <h1>Lista de usuarios</h1>
+    {%if usuario_lista%}
+    <ul>
+        {%for user in usuario_lista %}
+            <li>
+                <a href="{{}}">
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock% }
