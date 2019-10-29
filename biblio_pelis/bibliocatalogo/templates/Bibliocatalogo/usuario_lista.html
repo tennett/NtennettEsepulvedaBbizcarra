@@ -5,8 +5,12 @@
     <ul>
         {%for user in usuario_lista %}
             <li>
-                <a href="{{}}">
+                <a href="{{user.get_absolute_url}}">{{user.nombre, user.email}}</a>
             </li>
         {% endfor %}
     </ul>
+
+    {% else %}
+        <p>No se han registrado usuarios</p>
+    {% endif %}    
 {% endblock% }
