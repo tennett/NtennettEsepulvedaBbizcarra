@@ -19,7 +19,7 @@ class user(models.Model):
         return self.nombre
     
     def get_absolute_url(self):
-        return reverse("user_detail", args=[str(self.pk)])
+        return reverse("user_detail", args=[str(self.pk), str(self.nombre)])
     
 class pelicula(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Codigo de pelicula')

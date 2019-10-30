@@ -17,10 +17,12 @@ def index (request):
 #    return render(request, 'registro', context)
 
 class creacion_usuario(CreateView):
+    template_name='bibliocatalogo/usuario_registro.html'
     model=user
     fields='__all__'
 
 class Actualizacion_usuario(UpdateView):
+    template_name='bibliocatalogo/usuario_modificar.html'
     model=user
     fields=['nombre','email','password']  
 
@@ -29,7 +31,13 @@ class Eliminacion_usuario(DeleteView):
     succes_url = reverse_lazy('user')
 
 class DetalleVistaUsuario(generic.DetailView):
+    template_name='bibliocatalogo/usuario_detail.html'
     model = user
 
 class ListaUsuario(generic.ListView):
+    template_name='bibliocatalogo/usuario_lista.html'
     model = user
+    paginate_by = 20
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context

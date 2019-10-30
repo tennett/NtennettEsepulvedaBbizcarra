@@ -1,11 +1,12 @@
-{%extends "base_generic.html"%}
-{% Block List%}
+<!doctype html>
+{% extends "base_generic.html" %}
+{% block List%}
     <h1>Lista de usuarios</h1>
     {%if usuario_lista%}
     <ul>
-        {%for user in usuario_lista %}
+        {%for user in usuario_lista%}
             <li>
-                <a href="{{user.get_absolute_url}}">{{user.nombre, user.email}}</a>
+                <a href="{{user.get_absolute_url}}">{{user.email}}</a> ({{user.name}})
             </li>
         {% endfor %}
     </ul>
@@ -13,4 +14,5 @@
     {% else %}
         <p>No se han registrado usuarios</p>
     {% endif %}    
-{% endblock% }
+{% endblock%}
+</html>
