@@ -1,4 +1,4 @@
-<!doctype html>
+
 {% extends "base_generic.html" %}
 {% block List%}
     <h1>Lista de usuarios</h1>
@@ -6,7 +6,7 @@
     <ul>
         {%for user in usuario_lista%}
             <li>
-                <a href="{{user.get_absolute_url}}">{{user.email}}</a> ({{user.name}})
+                <a href="{{user.get_absolute_url}}"></a> ({{user.name}}, {{user.email}})
             </li>
         {% endfor %}
     </ul>
@@ -15,4 +15,4 @@
         <p>No se han registrado usuarios</p>
     {% endif %}    
 {% endblock%}
-</html>
+

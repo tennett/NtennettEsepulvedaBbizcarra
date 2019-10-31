@@ -9,7 +9,7 @@ class user(models.Model):
     """
     # Campos
     nombre = models.CharField(max_length=50, help_text="Nombre", blank=False)
-    email = models.EmailField(max_length=50, primary_key=True, help_text="Email usuario", blank=False)
+    email = models.EmailField(max_length=50, help_text="Email usuario", blank=False)
     password = models.CharField(max_length=30, help_text="Contraseña usuario", blank=False)
     # Métodos
     def __str__(self):

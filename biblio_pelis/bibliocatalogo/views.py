@@ -37,7 +37,8 @@ class DetalleVistaUsuario(generic.DetailView):
 class ListaUsuario(generic.ListView):
     template_name='bibliocatalogo/usuario_lista.html'
     model = user
-    paginate_by = 20
-    def get_context_data(self, **kwargs):
+    paginate_by = 15
+
+    """def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        return context
+        return context"""
