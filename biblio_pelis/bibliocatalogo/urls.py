@@ -9,7 +9,7 @@ urlpatterns = [
 
 urlpatterns += [
     path('usuarioregistro/', views.creacion_usuario.as_view(), name='CreateView'),
-    path('<pk>/borrar/', views.Actualizacion_usuario.as_view(), name="DeleteView"),
-    path('listausuarios/', views.ListaUsuario.as_view(), name='ListView')
-    
+    #path('borrar/', , name="DeleteView"),
+    path('listausuarios/', views.ListaUsuario.as_view(), name='ListView'),
+    path('usuariodetail/<int:id>',views.DetalleVistaUsuario.as_view(),name='DetailView')
 ]
