@@ -2,9 +2,9 @@
 {% extends "base_generic.html "%}
 {% block List%}
     <h1>Lista de usuarios</h1>
-    {%if usuario_lista%}
+    {% if usuario_lista %}
     <ul>
-        {%for user in usuario_lista%}
+        {% for user in usuario_lista %}
             <li>
                 <a href="{{user.get_absolute_url}}"></a> ({{user.name}}, {{user.email}})
             </li>
